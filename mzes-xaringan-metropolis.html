@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>MZES Xaringan Metropolis Theme</title>
+    <meta charset="utf-8" />
+    <script src="mzes-xaringan-metropolis_files/header-attrs/header-attrs.js"></script>
+    <link href="mzes-xaringan-metropolis_files/remark-css/default.css" rel="stylesheet" />
+    <link href="mzes-xaringan-metropolis_files/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <script src="mzes-xaringan-metropolis_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="mzes-xaringan-metropolis_files/plotly-binding/plotly.js"></script>
+    <script src="mzes-xaringan-metropolis_files/typedarray/typedarray.min.js"></script>
+    <script src="mzes-xaringan-metropolis_files/jquery/jquery.min.js"></script>
+    <link href="mzes-xaringan-metropolis_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="mzes-xaringan-metropolis_files/crosstalk/js/crosstalk.min.js"></script>
+    <link href="mzes-xaringan-metropolis_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="mzes-xaringan-metropolis_files/plotly-main/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="mtheme2.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# MZES Xaringan Metropolis Theme
+## A Modern MZES Look for RMarkdown-generated HTML5 Slides
+### <table class="authors">
+<tbody>
+<tr>
+<td>
+Denis Cohen
+</td>
+<td>
+Author 2
+</td>
+</tr>
+<tr>
+<td>
+.font75[University of Mannheim]
+</td>
+<td>
+.font75[Institution 2]
+</td>
+</tr>
+</tbody>
+</table>
+<table class="contact">
+<tbody>
+<tr>
+<td>
+<i class="fas  fa-envelope "></i> <a href="mailto:denis.cohen@mzes.uni-mannheim.de"><code>denis.cohen@mzes.uni-mannheim.de</code></a>
+</td>
+<td>
+<i class="fas  fa-envelope "></i> <a href="mailto:"><code>author2@institution2.edu</code></a>
+</td>
+</tr>
+<tr>
+<td>
+<i class="fas  fa-globe "></i> <a href="https://denis-cohen.github.io"><code>denis-cohen.github.io</code></a>
+</td>
+<td>
+<i class="fas  fa-globe "></i> <a href="https://"><code>author2.com</code></a>
+</td>
+</tr>
+<tr>
+<td>
+<i class="fab  fa-twitter "></i> <a href="https://twitter.com/denis_cohen"><code>@denis_cohen</code></a>
+</td>
+<td>
+<i class="fab  fa-twitter "></i> <a href="https://twitter.com/"><code>@author2</code></a>
+</td>
+</tr>
+</tbody>
+</table>
+### Cool Conference, Cool Place <br /> July 07, 2020
+
+---
+
+
+
+
+class: inverse, mline, center, middle
+
+# Key Facts
+
+---
+
+# What is the MZES Xaringan Metropolis Theme?
+
+- This theme, inspired by the MZES corporate design, is a customization of the popular [`metropolis`](https://github.com/matze/mtheme) theme for [`xaringan`](https://bookdown.org/yihui/rmarkdown/xaringan.html), an R package for generating interactive HTML5 slides using [RMarkdown](https://bookdown.org/yihui/rmarkdown/).
+- It relies on:
+
+    - [xaringan](https://github.com/yihui/xaringan), developed by Yihui Xie at RStudio,
+    - [Patrick Schratz](https://github.com/pat-s/xaringan-metropolis)' and [Danilo Freire](https://github.com/danilofreire/xaringan-metropolis)'s adaptations of the `metropolis` theme for `xaringan`, and
+    - [Garrik Aden-Buie](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/)'s `insert-logo.html` add-on.
+    
+- A matching MZES Beamer Metropolis Theme is available [here](https://github.com/denis-cohen/mzes-beamer-metropolis/).
+
+---
+
+# MZES Xaringan Metropolis vs MZES Beamer Metropolis
+
+### Similarities
+
+- Both themes use MZES corporate colors.
+- Both feature title slides with full contact and social media information for multiple authors.
+- Both embed the MZES Logo on the first slide.
+- Both use the 16:9 aspect ratio (instead of 4:3), the default on most projectors and screens nowadays.
+- Both allow for emphases in .cyan[MZES cyan] and .gold[MZES gold].
+---
+
+# MZES Xaringan Metropolis vs MZES Beamer Metropolis
+
+### Differences
+
+- Beamer produces static PDF slides, Xaringan produces dynamic, interactive HTML5 slides.
+- Beamer slides are written in LaTeX, Xaringan slides are written in RMarkdown.
+- Unlike Beamer, Xaringan allows for R code to be evaluated while knitting the code and for (interactive) R output to be directly embedded in the presentation.
+- Unlike the Beamer Theme, the Xaringan Theme does not support a permanent footer.
+- Unlike the Beamer Theme, the Xaringan Theme does not support progress bars on section title slides. Progress bars are only displayed underneath the slide title.
+- The Xaringan Theme does not support the Beamer Theme's custom blocks, though equivalent classes can be defined in `mtheme.css`.
+- The Xaringan Theme does not support the Beamer Theme's optional custom citation commands.
+- Whereas Beamer directly supports BibTeX references, Xaringan requires a little [work-around](https://github.com/yihui/xaringan/wiki/Bibliography-and-citations) using the R package [`RefManageR`](https://cran.r-project.org/web/packages/RefManageR/index.html). 
+
+---
+class: inverse, middle, mline, center
+# Cool Features
+
+---
+
+# Code highlighting
+
+The MZES Xaringan Metropolis Theme supports inline code highlighting in .cyan[MZES cyan] and line-wise code chunk highlighting in (shades of) .gold[MZES gold].
+
+#### Inline code highlighting
+
+Here is an example of inlight code highlighting for some R code: `N &lt;- 1000L`.
+
+#### Line-wise code chunk/output highlighting
+
+Suppose `N &lt;- 1000L` is really important in a function:
+
+```r
+if (TRUE) {
+* N &lt;- 1000L
+  mu &lt;- 4.0
+  sigma &lt;- 2.0
+  rnorm(N, mu, sigma)
+}
+```
+
+---
+
+# MathJax and Block Quotes
+
+#### MathJax
+By default, the MZES Xaringan Metropolis Theme highlights MathJax expressions in .gold[MZES gold].
+
+`$$y = \alpha + \beta x + \epsilon$$`
+
+where `\(\alpha\)` is the intercept, `\(\beta\)` is the slope, and `\(\epsilon\)` is an idiosyncratic error term.
+
+#### Block quotes
+
+Block quotes use a shading of .cyan[MZES cyan], too. By default, they are displayed at 75% of the original font size.
+
+&lt;blockquote&gt;
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+&lt;/blockquote&gt;
+
+---
+
+# Flexible use of side bars
+
+.left-column[ 
+## Findings
+A Chord Diagram
+]
+
+.right-column[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="ssdl_logo.png" alt="Fig. 1: Voter transitions turned into a blog logo" width="50%" /&gt;
+&lt;p class="caption"&gt;Fig. 1: Voter transitions turned into a blog logo&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+
+# Citations using `RefManageR`
+
+
+
+Citations can be inserted using `RefManageR`. After converting the sample file `biblatexExamples.bib` to an R object named `bib`, we can cite in-text via `Citet(bib, "cicero")` or in parentheses using `Citep(bib, "nietzsche:ksa")`. 
+
+Effectively, this will look like this: We first cite &lt;a name=cite-cicero&gt;&lt;/a&gt;[Cicero (1995)](#bib-cicero) in text and then &lt;a name=cite-nietzscheksa&gt;&lt;/a&gt;([Nietzsche, 1988a](#bib-nietzscheksa)) in parentheses. We can then print the bibliography using `PrintBibliography(bib)` inside an R code chunk with the option `results='asis'`.
+
+#### References
+.font75[
+Cicero, Marcus Tullius (1995). _De natura deorum. Über das Wesen
+der Götter_. Langlatin and langgerman. Ed. by Ursula
+Blank-Sangmeister. Trans.  by Ursula Blank-Sangmeister. With an
+afterw. by Klaus Thraede. Stuttgart: Reclam.
+
+Nietzsche, Friedrich (1988a). _Sämtliche Werke. Kritische
+Studienausgabe_. Ed. by Giorgio Colli and Mazzino Montinari. 2nd
+ed. Vol. 15. 15 vols. München and Berlin and New York: Deutscher
+Taschenbuch-Verlag and Walter de Gruyter.
+]
+
+---
+
+# Interactive R-generated HTML Widgets
+
+<div id="htmlwidget-3feb4857bfdef748eafb" style="width:1000px;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3feb4857bfdef748eafb">{"x":{"visdat":{"1b646d4243c8":["function () ","plotlyVisDat"]},"cur_data":"1b646d4243c8","attrs":{"1b646d4243c8":{"orientation":"h","node":{"label":["PowerPoint","Beamer","xaringan","PowerPoint","Beamer","xaringan"],"color":["#d04423","#008181","#DC2D37","#d04423","#008181","#DC2D37"],"pad":15,"thickness":15,"line":{"color":"black","width":0.5}},"link":{"source":[0,0,0,1,1,1,2,2,2],"target":[3,4,5,3,4,5,3,4,5],"value":[20,25,10,2,13,15,1,1,13]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"sankey"}},"layout":{"width":1000,"height":576,"margin":{"b":40,"l":60,"t":25,"r":10},"font":{"size":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"orientation":"h","node":{"label":["PowerPoint","Beamer","xaringan","PowerPoint","Beamer","xaringan"],"color":["#d04423","#008181","#DC2D37","#d04423","#008181","#DC2D37"],"pad":15,"thickness":15,"line":{"color":"black","width":0.5}},"link":{"source":[0,0,0,1,1,1,2,2,2],"target":[3,4,5,3,4,5,3,4,5],"value":[20,25,10,2,13,15,1,1,13]},"type":"sankey","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+---
+
+# Embedding ShinyApps
+&lt;p align="center"&gt;
+  &lt;iframe width="900" height="480" src="https://kgavras.shinyapps.io/Shiny_Development_Deployment/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;  
+.font75[*Note:* App by [Konstantin Gavras](https://kgavras.shinyapps.io/Shiny_Development_Deployment/). See the corresponding blog post on [Methods Bites](https://www.mzes.uni-mannheim.de/socialsciencedatalab/article/shiny-apps/)].
+&lt;/p&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> "
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<style>
+.logo {
+  background-image: url('mzes-logo-solo-4c.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 148px;
+  height: 100px;
+  z-index: 0;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    '.title-slide'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

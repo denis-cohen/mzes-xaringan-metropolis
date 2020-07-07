@@ -40,7 +40,7 @@ output:
       after_body: insert-logo.html
     css:
       - default
-      - mtheme.css
+      - mtheme2.css
       - fonts_mtheme.css
     nature: 
       beforeInit: "macros.js"
@@ -146,7 +146,7 @@ class: inverse, middle, mline, center
 
 # Code highlighting
 
-The MZES Xaringan Metropolis Theme supports inline code highlighting in MZES cyan and line-wise code chunk highlighting in (shades of) MZES gold.
+The MZES Xaringan Metropolis Theme supports inline code highlighting in .cyan[MZES cyan] and line-wise code chunk highlighting in (shades of) .gold[MZES gold].
 
 #### Inline code highlighting
 
@@ -169,10 +169,8 @@ if (TRUE) {
 
 # MathJax and Block Quotes
 
-The MZES Xaringan Metropolis Theme by defaults highlights MathJax expressions in the MZES gold color.
-
-
 #### MathJax
+By default, the MZES Xaringan Metropolis Theme highlights MathJax expressions in .gold[MZES gold].
 
 $$y = \alpha + \beta x + \epsilon$$
 
@@ -210,7 +208,7 @@ file <- system.file("Bib", "biblatexExamples.bib", package = "RefManageR")
 bib <- ReadBib(file, check = "error")
 ```
 
-Citations can be inserted using `RefManageR`. After converting the sample file `biblatexExamples.bib` as an R object `bib`, we can cite in-text via `Citet(bib, "cicero")` or in parentheses using `Citep(bib, "nietzsche:ksa")`. 
+Citations can be inserted using `RefManageR`. After converting the sample file `biblatexExamples.bib` to an R object named `bib`, we can cite in-text via `Citet(bib, "cicero")` or in parentheses using `Citep(bib, "nietzsche:ksa")`. 
 
 Effectively, this will look like this: We first cite `r Citet(bib, "cicero")` in text and then `r Citep(bib, "nietzsche:ksa")` in parentheses. We can then print the bibliography using `PrintBibliography(bib)` inside an R code chunk with the option `results='asis'`.
 
